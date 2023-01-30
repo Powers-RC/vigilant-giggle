@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Loaders tell webpack to process certain files as we load dependencies into project
 module.exports = { 
     module: {
@@ -13,6 +14,11 @@ module.exports = {
                     }
                 }
             }
-        ]
+        ],
     },
+    plugins:[
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
+        }),
+    ]
 }
